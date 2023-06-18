@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
-import DetailsPage from "./Components/DetailsPage";
 import DarkMode from "./Components/darkMode/DarkMode";
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/details" element={<DetailsPage />} />
           <Route path="/home" element={<Home />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
