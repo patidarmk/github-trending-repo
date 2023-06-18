@@ -5,7 +5,7 @@ import { Button, Stack } from "react-bootstrap";
 const Login = () => {
   const handleLogin = () => {
     const clientId = "15e92c4ed83be9db448d";
-    const redirectUri = "https://x9l2cm.csb.app/home";
+    const redirectUri = "https://hros-assignment.netlify.app/home";
     const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}`;
     window.location.href = authUrl;
   };
