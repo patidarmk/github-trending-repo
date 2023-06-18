@@ -13,7 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="https://hros-assignment.netlify.app/home" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
