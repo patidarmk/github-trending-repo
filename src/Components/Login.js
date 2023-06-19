@@ -9,6 +9,7 @@ const Login = () => {
   const isAuthenticated = localStorage.getItem("accessToken");
   if (isAuthenticated) {
     navigate("/home");
+	console.log("logged-In")
   }
   const handleLogin = () => {
     const clientId = "15e92c4ed83be9db448d";
