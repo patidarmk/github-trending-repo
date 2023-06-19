@@ -18,6 +18,7 @@ import { BsPower } from "react-icons/bs";
 import { BsFillBrightnessLowFill } from "react-icons/bs";
 import { AiOutlineFork } from "react-icons/ai";
 import { GoStar as StarIcon } from "react-icons/go";
+import Callback from "./Callback";
 const Home = () => {
   const dispatch = useDispatch();
   const [showDetails, setShowDetails] = useState(false);
@@ -112,6 +113,7 @@ const Home = () => {
 
   return (
     <>
+	<Callback />
       <Stack gap={2} className="col-md-5 mx-auto" style={{ minWidth: "100%" }}>
         <Container>
           <Row className="mt-2">
