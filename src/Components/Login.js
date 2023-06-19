@@ -8,8 +8,9 @@ const Login = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("accessToken");
   if (isAuthenticated) {
-    navigate("/home");
-	console.log("logged-In")
+	  console.log("logged-In")
+	  navigate("/home");
+	
   }
   const handleLogin = () => {
     const clientId = "15e92c4ed83be9db448d";
