@@ -117,7 +117,7 @@ const Home = ({isLoggedIn,setIsloggedIn}) => {
 
   return (
     <>
-	{!isloggedIn && <Callback setIsloggedIn={setIsloggedIn} /> }
+	{!isLoggedIn && <Callback setIsloggedIn={setIsloggedIn} /> }
       <Stack gap={2} className="col-md-5 mx-auto" style={{ minWidth: "100%" }}>
         <Container>
           <Row className="mt-2">
