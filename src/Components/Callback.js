@@ -20,8 +20,8 @@ const Callback = () => {
               Accept: "application/json"
             },
             body: JSON.stringify({
-              client_id: "YOUR_CLIENT_ID",
-              client_secret: "YOUR_CLIENT_SECRET",
+              client_id: "15e92c4ed83be9db448d",
+              client_secret: "41c9d7e178cbab99dbb9e70b4b6b29f4f4e872a9",
               code
             })
           }
