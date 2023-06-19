@@ -36,6 +36,8 @@ const Home = () => {
     const isoDate = startDate.toISOString().split("T")[0];
     return isoDate;
   });
+  const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("accessToken");
 
   const navigate = useNavigate();
 
@@ -101,6 +103,7 @@ const Home = () => {
   };
 
   const handleLogout = () => {
+	  localStorage.removeItem("accessToken")
     navigate("/");
   };
 
@@ -113,7 +116,7 @@ const Home = () => {
 
   return (
     <>
-	<Callback />
+	{!isAuthenticated && <Callback /> }
       <Stack gap={2} className="col-md-5 mx-auto" style={{ minWidth: "100%" }}>
         <Container>
           <Row className="mt-2">
