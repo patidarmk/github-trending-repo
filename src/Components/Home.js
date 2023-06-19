@@ -19,7 +19,7 @@ import { BsFillBrightnessLowFill } from "react-icons/bs";
 import { AiOutlineFork } from "react-icons/ai";
 import { GoStar as StarIcon } from "react-icons/go";
 import Callback from "./Callback";
-const Home = () => {
+const Home = ({isLoggedIn,setIsloggedIn}) => {
   const dispatch = useDispatch();
   const [showDetails, setShowDetails] = useState(false);
   const [trendingRepos, setTrendingRepos] = useState([]);
@@ -104,6 +104,7 @@ const Home = () => {
 
   const handleLogout = () => {
 	  localStorage.removeItem("accessToken")
+	  setIsloggedIn(false)
     navigate("/");
   };
 
@@ -116,7 +117,7 @@ const Home = () => {
 
   return (
     <>
-	{!isAuthenticated && <Callback /> }
+	{!isloggedIn && <Callback setIsloggedIn={setIsloggedIn} /> }
       <Stack gap={2} className="col-md-5 mx-auto" style={{ minWidth: "100%" }}>
         <Container>
           <Row className="mt-2">
