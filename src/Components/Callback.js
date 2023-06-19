@@ -43,6 +43,7 @@ const Callback = () => {
         }
       } else {
         console.error("Code not found in the URL");
+		navigate("/");
       }
     };
 
