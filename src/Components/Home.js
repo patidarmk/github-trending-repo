@@ -39,7 +39,6 @@ const Home = () => {
   const navigate = useNavigate();
   const isAuthenticated = localStorage.getItem("accessToken");
 
-  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);

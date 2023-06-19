@@ -51,7 +51,7 @@ const Callback = () => {
 
   return (
     <div>
-      <h2>Authenticating...</h2>
+  
     </div>
   );
 };
