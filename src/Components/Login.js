@@ -3,13 +3,13 @@ import githubsvg from "../assets/github-svgrepo.svg";
 import { Button, Stack } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({isLoggedIn}) => {
+const Login = () => {
 	
   const navigate = useNavigate();
- // const isAuthenticated = localStorage.getItem("accessToken");
-  if (isLoggedIn) {
-	  console.log("logged-In")
-	  navigate("/home");
+  const isAuthenticated = localStorage.getItem("accessToken");
+  if (isAuthenticated) {
+	console.log("logged-In")
+	navigate("/home");
 	
   }
   const handleLogin = () => {

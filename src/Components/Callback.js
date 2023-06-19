@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const Callback = ({setIsloggedIn}) => {
+const Callback = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -35,8 +35,7 @@ const Callback = ({setIsloggedIn}) => {
           // Save the access token to local storage
           localStorage.setItem("accessToken", accessToken);
           // Redirect to the home page
-          console.log("logged-in");
-		  setIsloggedIn(true)
+          console.log("logee");
           navigate("/home");
         } else {
           console.error("Error exchanging code for access token");
