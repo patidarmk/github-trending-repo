@@ -12,7 +12,8 @@ const Callback = () => {
       if (code) {
         // Perform API request to exchange code for access token
         const response = await fetch(
-          "https://github.com/login/oauth/access_token",
+        //  "https://github.com/login/oauth/access_token",
+		"https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token"
           {
             method: "POST",
             headers: {
@@ -27,7 +28,7 @@ const Callback = () => {
             })
           }
         );
-
+		
         if (response.ok) {
           const data = await response.json();
           const accessToken = data.access_token;
